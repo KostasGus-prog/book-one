@@ -1,0 +1,101 @@
+<!-- will be bound into ion-nav-view name="wrap"> -->
+
+<ion-side-menus>
+	<ion-side-menu-content>
+
+		<ion-header-bar class="bar-light">
+
+        <button class="button icon ion-navicon button-clear"
+        ng-click="toggleLeftMenu()"></button>
+
+        <!--<h1 class="title">{{ data.chapters[ch_id - 1].title }}</h1>-->
+
+        <h1 class="title"><i>Hooktheory I</i></h1>
+
+
+        <!--
+        <a 	ng-if="browser === true"
+            class="button button-clear icon ion-person"
+          href="../editor/my">
+        </a>
+        -->
+
+      </div>
+
+
+		</ion-header-bar>
+
+
+		<!--
+		<div class="bar bar-header">
+
+  			<button class="button icon ion-navicon button-clear"
+			ng-click="toggleLeftMenu()"></button>
+
+		  <h1 class="title">Header Buttons</h1>
+		  <button class="button">Edit</button>
+		</div>
+		-->
+
+		<!--
+		Use overflow-scroll="true" to enable scroll in classic browser.  This disables some
+		ionic awesomeness like the bounce effect and  pull to refresh but it makes for great
+		debugging in the browser.  I think I want to set a $scope variable so this is easy to
+		configure
+		-->
+
+		<!--
+		don't need ion-nav-view since we dont' need to preserve any transitions between
+		views at this level.  If we ever did get around to vertical slide-in that
+		we could go back to ui-view
+		-->
+
+		<!-- padding="true"
+						overflow-scroll="true"-->
+
+		<ion-content
+			padding="true"
+			overflow-scroll="true"
+		>
+		<div 	class="automargin"
+				ng-style="{
+					'max-width': '700px',
+					'padding-bottom': '10px'
+				}"
+				id="ng-content-wrap">
+				<ui-view 	name="menuContent"></ui-view>
+		</div>
+		</ion-content>
+
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left">
+
+		<!--
+		include table of contents.make sure the src string is in single quotes
+		otherwise it will be treated as a javascript variable which will result
+		with null
+		-->
+		<ion-header-bar class="bar-stable">
+
+      <h1 class="title">
+		    <a  class="uppercase"
+            	ng-click="hooktheory()">
+
+          <img 	src="img/hooktheory-logo-2016-on-light-b.svg"
+              style="height: 28px; width: 28px; margin-top: 8px;">
+
+        </a>
+      </h1>
+
+		</ion-header-bar>
+
+
+		<ion-content
+			overflow-scroll="true">
+			<ng-include src="'templates/side-menu.html'"></ng-include>
+		</ion-content>
+
+	</ion-side-menu>
+
+</ion-side-menus>

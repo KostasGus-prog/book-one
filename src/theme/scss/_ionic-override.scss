@@ -1,0 +1,219 @@
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+/*
+.item-divider {
+	font-size: inherit;
+	background-color: #FFF;
+	padding-top: 30px;
+	border-top: none;
+}
+*/
+
+.item-divider.white {
+	font-size: inherit;
+	//background-color: #FFF;
+	padding-top: 30px;
+	border-top: none;
+}
+
+/*
+.item:not(.item-divider) {
+	background-color: #F5F5F5;
+}
+*/
+
+// .item.gray {
+// 	background-color: #F5F5F5;
+// }
+
+
+$padding_mobile: 15px;
+$padding_tablet: 15px;
+
+.padding {
+	padding: $padding_mobile;
+
+	@media only screen and (min-width: 768px){
+		padding: $padding_tablet;
+
+	}
+}
+
+.bar {
+
+	padding-left: $padding_mobile - 5px;
+	padding-right: $padding_mobile - 5px;
+
+	@media only screen and (min-width: 768px) {
+		padding-left: $padding_tablet - 5px;
+		padding-right: $padding_tablet - 5px;
+	}
+}
+
+
+/* Fix for right button in header */
+
+
+.bar .title + .button:last-child {
+	right: $padding_mobile - 5px;
+	@media only screen and (min-width: 768px) {
+		right: $padding_tablet - 5px;
+	}
+}
+
+
+.button-clear.button-clear {
+    color: $font_color;
+}
+
+.button {
+	@extend .round-button;
+	font-size: inherit;
+}
+
+a.item {
+	font-size: inherit;
+}
+
+.item {
+	h3 {
+		font-size: inherit;
+	}
+}
+
+.button .icon::before,
+.button.icon::before,
+.button.icon-left::before,
+.button.icon-right::before {
+	font-size: inherit;
+}
+
+/*
+.item-icon-left .icon::before,
+.item-icon-right .icon::before {
+	width: 1.4em;
+}
+*/
+
+.item-icon-left .icon,
+.item-icon-right .icon {
+	font-size: 1.3em;
+}
+
+.card {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.rn-carousel-indicator {
+	background-color: #DDDDDD;
+}
+
+.rn-carousel-indicator span {
+	color: #FFF;
+}
+.rn-carousel-indicator span.active {
+	color: #333;
+}
+
+/*
+video {
+	width: 100%    !important;
+	height: auto   !important;
+}
+*/
+
+.card {
+	font-size: inherit;
+}
+
+.card.list {
+	margin-bottom: 20px;
+}
+.item {
+	font-size: inherit;
+	p {
+		font-size: inherit;
+	}
+}
+
+/*
+video {
+	background-color: #FF0000;
+}
+*/
+
+
+
+.bar .button {
+	font-size: 16px !important;
+}
+
+.automargin {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+.bar-header {
+  top: 0;
+  border-top-width: 0;
+  box-shadow: 0px 1px 0px #DDDDDD;
+}
+*/
+
+.slider-slide.no-pad {
+	padding: 0px;
+}
+
+.bar.bar-light {
+	background-image: none;
+	border-bottom: 1px solid #EEE;
+}
+
+ol {
+  list-style-type: lower-latin;
+  margin-left: 40px;
+  margin-bottom: 1em;
+}
+
+$color_link: #28a7be;
+$color_link_hover: #1f8294;
+$color_link_active: #1b5e6a;
+
+/*
+.button.button-positive.button-outline {
+	color: $color-primary-0;
+	border-color: $color-primary-1;
+}
+.button.button-positive.button-outline:hover {
+	color: $color-primary-3;
+	border-color: $color-primary-3;
+}
+.button.button-positive.button-outline:active,
+.button.button-positive.button-outline.activated,
+ {
+	color: $color-primary-4;
+	border-color: $color-primary-4;
+	background: none;
+}
+*/
+
+
+.slider.slider-vanilla-height {
+    height: auto;
+    .slider-slides {
+        height: auto;
+        .slider-slide {
+            height: auto;
+        }
+    }
+    .slider-pager {
+        bottom: 4px;
+    }
+}

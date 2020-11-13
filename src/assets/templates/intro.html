@@ -1,0 +1,175 @@
+<ion-view left-buttons="leftButtons" right-buttons="rightButtons">
+
+
+	<ion-header-bar class="bar-light">
+
+
+
+		<button ng-if="!slideIndex"
+				ng-click="startApp()"
+				class="button button-positive button-clear no-animation">
+			Skip Intro
+		</button>
+
+		<button ng-if="slideIndex > 0"
+				ng-click="prev()"
+				class="button button-positive button-clear no-animation">
+			Back
+		</button>
+
+
+		<button ng-if="slideIndex == slideNum"
+				ng-click="startApp()"
+				class="button button-positive no-animation">
+			Start Reading
+		</button>
+
+		<button ng-if="slideIndex != slideNum"
+				ng-click="next()"
+				class="button button-positive no-animation">
+			Next
+		</button>
+
+
+
+	</ion-header-bar>
+
+	<!--
+	<ion-nav-bar 	class="nav-title-slide-ios7"
+					type="bar-default"
+					class="bar-light">
+	</ion-nav-bar>
+
+
+	<ion-nav-buttons side="left">
+
+		<button ng-if="!slideIndex"
+				ng-click="startApp()"
+				class="button button-positive button-clear no-animation">
+			Skip Intro
+		</button>
+
+		<button ng-if="slideIndex > 0"
+				ng-click="prev()"
+				class="button button-positive button-clear no-animation">
+			Back
+		</button>
+
+	</ion-nav-buttons>
+
+	<ion-nav-buttons side="right">
+		<button ng-if="slideIndex == 6"
+				ng-click="startApp()"
+				class="button button-positive no-animation">
+			Start Reading
+		</button>
+
+		<button ng-if="slideIndex != 6"
+				ng-click="next()"
+				class="button button-positive no-animation">
+			Next
+		</button>
+	</ion-nav-buttons>
+	-->
+
+	<ion-slide-box on-slide-changed="slideChanged(index)">
+
+
+
+		<ion-slide class="slider-slide-limit">
+
+			<img
+				src="img/hooktheory-logo-2016-on-light-b.svg"
+				style="width: 120px; padding-top: 30px;">
+			<h2>Welcome to <i>Hooktheory I</i></h2>
+			<p>By Ryan Miyakawa, Dave Carlton, and Chris Anderson</p>
+			<br>
+
+             <!--
+			<h1>Hey there! <span class="sub">Welcome.</span></h1>
+
+			<div ng-if="fireos">
+				<img src="img/hooktheory-one-script.jpg"
+					 style="max-width: 200px; margin-bottom: 30px;"
+					 >
+				<img src="img/chapter-image/3.jpg"
+					style="margin-bottom: 20px;">
+			</div>
+
+			<div ng-if="!fireos">
+				<img src="img/hooktheory-one-script.svg"
+					 style="max-width: 200px; margin-bottom: 30px;"
+					 >
+				<img src="img/chapter-image/3.svg"
+					style="margin-bottom: 20px;">
+			</div>
+
+
+			<p>By Ryan Miyakawa, David Carlton, and Chris Anderson</p>
+			-->
+
+		</ion-slide>
+		<ion-slide>
+			<h1>Before we begin ...</h1>
+
+			<p>We are so excited to spend some time with you and talk about the wonderful world of music.  Before we begin, here are a few tips to help you get the most out of this book ...</p>
+		</ion-slide>
+		<ion-slide>
+			<h1>Navigation</h1>
+						<i class="icon ion-navicon-round"
+				style="font-size: 50px;"></i><br>
+			<p>When reading, there is always a nav icon in the top left, like the one shown above, that you can use to access the table of contents and get help.</p>
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Font size</h1>
+						<i class="icon ion-gear-a"
+				style="font-size: 50px;"></i><br>
+			<p>Happy eyes make happy readers.  The font size in this book is adjustable.  To change it, visit the “Settings” page from the side menu. </p>
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Videos<span ng-if="isAndroid"><sup>&dagger;</sup></span></h1>
+			<i class="icon ion-play"
+				style="font-size: 50px;"></i><br>
+			<p>This book is loaded with videos.  Click the play button on embedded videos to play them.</p>
+
+
+
+			<div ng-if="fireos === true || android === true">
+				When you play the first video, your device may ask you which app you want to use (if you have multiple video players installed).  We recommend using the default “Photos” app.<!--Playing videos with the default "photos" app will cause this app to exit once the video finishes playing (a FireOS bug).  We recommend that you <a ng-click="amazonAppstoreASIN('B00BXDOSXS')">download HD Video Player </a> and use that to play videos until Amazon fixes this.  Thanks - The Hooktheory Team
+				-->
+			</div>
+
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Headphones</h1>
+			<i class="icon ion-headphone"
+				style="font-size: 50px;"></i><br>
+			<p>We highly recommend using this app with headphones.</p>
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Get help if you need it</h1>
+			<i class="icon ion-chatbubble"
+				style="font-size: 50px;"></i><br>
+			<p>We love to talk with our readers.  To ask us a question, visit the “Ask a Question” page from the side menu.</p>
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Hookpad</h1>
+
+			<p>This book was written from the ground up to be used alongside Hookpad, Hooktheory's innovative musical sketchpad that helps you create amazing chord progressions and melodies. Visit our website, www.hooktheory.com, to learn more.</p>
+
+			<!--<p><i>Hookpad simplifies songwriting by helping you choose chords that sound good together and guiding you to write a good melody.</i></p> -->
+		</ion-slide>
+
+		<ion-slide>
+			<h1>Thank you for choosing Hooktheory</h1>
+			<i class="icon ion-heart"
+				style="font-size: 50px;"></i><br>
+			<p>Thanks so much for purchasing <i>Hooktheory I</i>. When you click “start reading” the book will open to the first chapter. We hope you <!--<i class="icon ion-heart"></i>-->love it!  </p>
+		</ion-slide>
+	</ion-slide-box>
+</ion-view>

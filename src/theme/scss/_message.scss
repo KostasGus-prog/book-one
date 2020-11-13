@@ -1,0 +1,102 @@
+/* bootstrap coloring */
+
+.success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+.info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+.warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+
+.error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.toc {
+	background-color: $list_bg_color;
+	border-color: $border_color;
+}
+
+payment{
+	span.message{
+		padding:0px;
+		margin:0px;
+	}
+}
+
+div.message{
+	padding:15px;
+	margin-bottom:10px;
+	margin-top:10px;
+    /* border: 1px solid; */
+    border-width: 1px;
+    border-style: solid;
+    @extend .round;
+}
+
+div.message.answer{
+	padding:5px;
+	@extend .success;
+}
+
+div.message.compact {
+	margin-top: 0px;
+}
+
+div.message.top{
+	margin-top:0px;
+}
+
+div.message.bottom{
+	margin-bottom:0px;
+}
+
+div.message.bottom-bleed{
+	padding-bottom:0px;
+}
+
+@media only screen and (min-width: 768px){
+	div.message{
+		padding:25px;
+		margin-bottom:20px;
+		margin-top:20px;
+	}
+	div.message.answer{
+		padding:10px;
+	}
+	div.message.compact {
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+	
+	div.message.bottom-bleed{
+		padding-bottom:0px;
+	}
+}
+
+.aclose {
+	a.close {
+		color: inherit;
+	}
+	
+	a.close:hover {
+		color: inherit;
+	} 
+}  
+
+.message.white {
+	background-color: #FFFFFF;
+	border-color: $border_color;
+}

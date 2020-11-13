@@ -1,0 +1,110 @@
+
+
+
+
+
+<ul class="list"
+	style="margin-bottom: 0px; margin-top: 0px; font-size: 0.8em;">
+
+	<!--  -->
+
+
+
+
+	<!--
+	<a 	class="item gray"
+		href="{{loc}}#/cover"
+		ng-click="toggleLeftMenu()">Cover
+	</a>
+	-->
+
+	<a 	class="item gray "
+		href="{{loc}}#/intro"
+		ng-click="toggleLeftMenu()">Welcome Test
+	</a>
+
+	<a 	class="item gray "
+		href="{{loc}}#/settings"
+		ng-click="toggleLeftMenu()">Settings
+	</a>
+
+
+	<a 	class="item gray "
+		href="{{loc}}#/question"
+		ng-click="toggleLeftMenu()">Ask a Question
+	</a>
+
+	
+
+	<a 	class="item gray "
+		ng-click="rate()">Write a Review
+	</a>
+
+	<a 	class="item gray "
+		href="{{loc}}#/ii"
+		ng-click="toggleLeftMenu()"><i>Hooktheory II</i>
+	</a>
+
+	
+
+
+
+	
+
+
+</ul>
+
+<!-- Make separate ul for each chapter. I don't know a better way to do it -->
+
+
+<ul ng-repeat="chapter in data.chapters"
+	class="list"
+	style="margin-bottom: 0px; margin-top: 0px; font-size: 0.8em;">
+
+
+	<div class="item item-divider white">
+		<h3>{{ $index + 1 }} {{ chapter.title }} {{ chapter.subtitle }}</h3>
+
+
+		<!-- Switch to jpg (vs. svg) for compatability with Kindle FireOS -->
+		<img 	ng-src="img/chapter-image/{{ $index + 1 }}.svg"
+				ng-if="$index != 5"
+				style="margin-top: 5px; margin-bottom: 5px;">
+
+		<!--
+		<div ng-include src="'/book/' + ($index+1).toString() + '.0.html'"></div>
+		-->
+	</div>
+
+	<a 	class="item gray"
+		ng-repeat="section in chapter.sections"
+		href="{{loc}}#/read/{{ $parent.$index + 1 }}/{{ $index + 1 }}"
+		ng-bind-html="($parent.$index + 1).toString() + '.' + ($index + 1).toString() + ' ' + section.title"
+		ng-click="toggleLeftMenu()"
+		nav-clear>
+	</a>
+
+	<!-- ng-click="toggleLeftMenu()"-->
+	<!-- ng-click="unloadVideos()" -->
+	<!--
+	<li ng-repeat="section in chapter.sections">
+		<a ng-href="#/read/{{ $parent.$index + 1 }}/{{ $index + 1 }}" ng-bind-html="section.title"></a>
+	</li>
+	-->
+</ul>
+
+<!--
+<ul class="list"
+	style="margin-bottom: 0px; margin-top: 0px;">
+
+	<div class="item item-divider white">
+		<h3>Appendix</h3>
+	</div>
+
+	<a 	class="item gray"
+		href="{{loc}}#/key-carousel"
+		ng-click="toggleLeftMenu()">Key Carousel
+	</a>
+</ul>
+
+-->

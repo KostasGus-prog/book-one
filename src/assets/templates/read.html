@@ -1,0 +1,29 @@
+
+		<h4	ng-if="sec_id == 1"
+			style="margin-bottom: 0px; margin-top: 0px;">CHAPTER {{ch_id}}</h4>
+		<!-- Chapter name -->
+		<h1 ng-bind-html="data.chapters[ch_id - 1].title"
+			ng-if="sec_id == 1"
+			class="tight-top"></h1>
+
+		<!-- Show chapter image when it is the first section -->
+		<ng-include src=" 'templates/book/' + ch_id + '.0.html' "
+		            ng-if="sec_id == 1">
+		</ng-include>
+
+		<!-- Section -->
+		<h2 ng-bind-html="ch_id + '.' + sec_id + ' ' + data.chapters[ch_id - 1].sections[sec_id - 1].title"></h2>
+
+		<!-- Copy -->
+		<ng-include src="url"
+		            onload="handleOnload()">
+		</ng-include>
+
+		<a
+			ng-if="next !== null"
+			href="{{ loc }}{{ next.url }}"
+			ng-bind-html="next.text"
+			ng-click="unloadVideos()"
+			class="button button-block button-positive button-outline">
+		</a>
+

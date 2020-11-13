@@ -1,0 +1,11 @@
+<h4>Basic chords in every key (swipe to change the key)</h4>
+<ion-slide-box class="slider-vanilla-height">
+  <ion-slide ng-repeat="image in keySelectorImages"
+  			 ng-style="{
+				'padding': '0px'
+			}"
+             class="slider-slide-vanilla-height">
+  	<img ng-src="{{ image }}"
+  		style="margin-bottom: 10px;">
+  </ion-slide>
+</ion-slide-box>

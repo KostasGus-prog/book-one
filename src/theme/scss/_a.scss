@@ -1,0 +1,168 @@
+/*Link settings
+---------------*/
+.uppercase {
+	text-transform: uppercase;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover,
+a:visited:hover,
+a:active,
+a:visited:active {
+	text-decoration: none;
+}
+
+
+a,
+a:visited {
+	color: $link_color;
+}
+
+a:hover,
+a:visited:hover { 
+	color: $link_color_hover;
+}
+
+a:active,
+a:visited:active {
+	color: $link_color_active;
+}
+
+
+/*
+div.dictation {
+	a,
+	a:visited {
+		color: $color_orange;
+	}
+
+	
+	a:hover,
+	a:visited:hover { 
+		color: $color_orange_hover;
+	}
+	
+
+	a:active,
+	a:visited:active {
+		color: $color_orange_active;
+	}
+}
+
+div.editor {
+	a,
+	a:visited {
+		color: $color_red;
+	}
+
+	
+	a:hover,
+	a:visited:hover { 
+		color: $color_red_hover;
+	}
+	
+
+	a:active,
+	a:visited:active {
+		color: $color_red_hover;
+	}
+}
+*/
+
+
+a.no-style, 
+a.no-style:visited {
+	color: inherit !important;
+}
+
+a.no-style:hover, 
+a.no-style:visited:hover {
+	color: inherit !important;
+}
+
+a.no-style:active, 
+a.no-style:visited:focus{
+	color: inherit !important;
+}
+
+
+a.black{
+	color:#000;
+}
+
+a.black:hover{
+	color:#007fcb;
+}
+
+a span.black{
+	color:#000;
+}
+
+.fake-link{
+	color:#007fcb;
+}
+
+.fake-link:hover{
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+
+a.quiet{
+	color: #999;
+}
+
+/*
+a.button {
+	color: #444;
+}
+a.button:hover {
+	text-decoration: none;
+}
+*/
+
+a.no-color {
+	color: $font_color;
+}
+
+a.no-color:hover {
+	color: $font_color;	
+}
+
+a.no-underline:hover {
+	text-decoration:none;
+}
+
+/*
+a.inherit {
+	color: inherit;
+}
+
+a.inherit:hover {
+	color: $link_color;
+	cursor: pointer;
+}
+*/
+
+	
+.stripe-button-el {
+	width: 100%;
+}
+
+
+a.item {
+	color: $font_color;
+	font-family: "Helvetica";
+}
+
+a.item:hover {
+	color: $font_color;
+}
+	
+
+
+
+

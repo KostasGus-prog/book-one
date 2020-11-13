@@ -1,0 +1,29 @@
+
+		<h1>Settings</h1>
+
+		<h3>Text size</h3>
+
+		<!--
+		<select ng-model="global.fontSize"
+				ng-change="openLeftMenu()">
+			<option ng-repeat="size in fontSizes"
+					value="{{ size.value }}"
+					ng-selected="global.fontSize == size.value">
+				{{ size.label }}
+			</option>
+		</select>
+	-->
+
+
+	<div class="item range range-positive">
+		<span style="font-size: 12px;">12 px</span>
+		<input
+			type="range"
+			name="volume"
+			min="12"
+			max="24"
+			ng-model="global.fontSize">
+		<span style="font-size: 24px">24 px</span>
+	</div>
+
+	<p>[Sample text] If you dream it, you can do it.  Don't wait; the time will never be just right. If not now, when? If not you, who? Try things to see if they work. A jug fills drop by drop. Dream big and dare to fail. Create something amazing. Well begun is half done.</p>

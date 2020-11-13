@@ -1,0 +1,179 @@
+/* Palleton
+-------------------------------------- */
+
+$color-primary-0: #4B9ED4;	// Blue
+$color-primary-1: #A1D1F0;
+$color-primary-2: #70B6E2;
+$color-primary-3: #2B88C4;
+$color-primary-4: #0A70B2;
+
+$color-complement-0: #FFB250;	// Orange
+$color-complement-1: #FFD8A6;
+$color-complement-2: #FFC376;
+$color-complement-3: #FFA22C;
+$color-complement-4: #FF8E00;
+
+$color-2-0: #285BA6;	// Navy
+$color-2-1: #6B91CA;
+$color-2-2: #4571B4;
+$color-2-3: #104490;
+$color-2-4: #0A3371;
+
+$color-2-0: #085178;	// Navy
+$color-2-1: #33779C;
+$color-2-2: #116897;
+$color-2-3: #044162;
+$color-2-4: #022F47;
+
+$color-3-0: #FDD914;	// Yellow
+$color-3-1: #FFE86D;
+$color-3-2: #FFE244;
+$color-3-3: #CDAD00;
+$color-3-4: #A28900;
+
+$color-4-0: #D72B2F;	// Red
+$color-4-1: #FD8184;
+$color-4-2: #EA5256;
+$color-4-3: #AF1418;
+$color-4-4: #880003;
+
+// As hex codes */
+
+$color-5-0: #B85798;	// Pinkish */
+$color-5-1: #E8B4D7;
+$color-5-2: #D282B8;
+$color-5-3: #9D357B;
+$color-5-4: #821D61;
+
+
+$height_header: 93px; /* 90 */
+$height_header_mobile: 50px; /* 44 px */
+$height_header_mobile_expanded: 220px;
+$height_footer: 0px;
+
+$padding_mobile: 15px; /* 15 */
+$padding_tablet: 25px;
+$padding_laptop: 50px;
+
+/* */
+
+$searchBackgroundColor: rgba(245, 245, 245,1);
+
+/* Background colors */
+
+$list_bg_color: #F5F5F5; /* #FFFFFF;*/
+$list_bg_color: #EAEAEA;
+/*
+$list_bg_color: #DADFE6;
+$list_bg_color: #F4F6F9;
+*/
+$list_bg_color_hover: #DDDDDD;  /*  #F5F5F5;*/
+$list_bg_color_active: #D0D0D0;
+$list_border_color: #DBDBDB;
+
+
+
+/* Font colors
+------------------------------------------------------------------------------*/
+$font_color: #333333;
+$link_color: rgb(31, 137, 219); /* #0645AD; */
+$link_color_hover: rgb(1, 124, 184);
+$link_color_hover: #10456E;
+$link_color_hover: #166099;
+$link_color_active: #046799;
+$link_color_active: #0F436A;
+
+
+$header_color: #BBB;
+$header_link_color: #555;
+$header_link_color_hover: #000;
+$header_link_color_active: $link_color;
+$header_border_radius: 15px;
+$header_fa_color: #999;
+$header_fa_color_hover: #777;
+
+$header_bg_color: $list_bg_color;
+$header_bg_color_hover: $list_bg_color_hover;
+
+
+$footer_link_color: #999;
+$footer_link_color_hover: #666;
+
+$nav_color: $font_color;
+$nav_color_hover: #000;
+
+/* Twitter */
+/*
+$nav_color: #A3AcB2;
+$nav_color_hover: #559ebc;
+$nav_color: #667580;
+
+$nav_color: #777;
+$nav_color_hover: #555;
+*/
+/*
+$input_bg_color: rgb(202, 210, 215);
+$input_bg_color_hover: rgb(225, 228, 230);
+*/
+
+/* Form colors
+----------------------------------------------------------------------------*/
+
+$input_bg_color: #D8D8D8;
+$input_bg_color: $list_bg_color;
+/* $input_bg_color: #F5F5F5; */
+$input_bg_color_hover: #E6E6E6;
+$input_bt_color_hover: $list_bg_color_hover;
+$input_bg_color_focus: #FAFAFA;
+/* $input_bg_color_focus: #FFFFFF; */
+$input_placeholder_color: #FFFFFF;
+
+$submit_color: $link_color;
+$submit_color_hover: $link_color_hover;
+$submit_color_active: $link_color_active;
+
+$submit_color_gray: #999999;
+$submit_color_hover_gray: #888888;
+$submit_color_active_gray: #777777;
+
+$button_color: $link_color;
+
+/* border
+----------*/
+
+$border_color: #E0E0E0;
+$border_color: #DDDDDD;
+$border_color: #CCCCCC;
+/* $border_color: #FFFFFF; */
+$overlay_border_color: #BBBBBB;
+$collection_border_color: #DDDDDD;
+
+$comment_bg_color: #EDEDED;
+$comment_border_color: #DBDBDB;
+$comment_border_color: #FFFFFF;
+$comment_border_color: $border_color;
+$comment_padding_mobile: 10px;
+$comment_padding_tablet: 10px;
+
+$bg_color: #EDEDED;
+
+$header_border_radius: 10px;
+$border_radius: 6px;
+
+$highlight_color: #FFFFCC;
+$highlight_border_color: #FFFF99;
+
+$color_red: #CE2129;
+$color_red_hover: #A32A2E;
+$color_red_active: #7a2023;
+
+
+$color_orange: #EEA402;
+$color_orange_hover: #ca8c04;
+$color_orange_active: #a67307;
+
+$color_blue_gray: #D4D8E2;
+$color_blue_gray_hover: #A7ACB1;
+$color_blue_gray_hover: #C6CCD2;
+
+$color_light: #999;

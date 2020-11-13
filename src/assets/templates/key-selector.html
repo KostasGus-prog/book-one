@@ -1,0 +1,48 @@
+<!--
+<p>
+	The following image carousel will help you with this. It's just like the one you saw in Chapter 1.  It shows each chord in Roman numerals with its "in-key" name below the chord block.  The default key is C Major, but you can swipe to any other key.  This lets us see, for example, that the progression <i>I</i> &rarr; <i>IV</i> &rarr; <i>V</i> corresponds to C &rarr; F &rarr; G in the key of C Major, G &rarr; C &rarr; D in the key of G Major and D &rarr; G &rarr; A in the key of D Major.
+</p>
+-->
+
+<!--
+<h4><i>I</i>, <i>ii</i>, <i>iii</i>, <i>IV</i>, <i>V</i>, <i>vi</i>, and <i>vii&deg;</i> in every key</h4>-->
+<h4>Basic chords in every key (swipe to change the key)</h4>
+
+<p></p>
+
+<ion-slide-box class="slider-vanilla-height">
+  <ion-slide ng-repeat="image in keySelectorImages"
+  			 ng-style="{
+				'padding': '0px'
+			}"
+             class="slider-slide-vanilla-height">
+  	<img 	ng-src="{{ image }}"
+  			style="margin-bottom: 10px;">
+  </ion-slide>
+</ion-slide-box>
+
+
+<!--
+<div 	class="list card">
+
+  <div class="item">
+	<h2><i>I</i>, <i>ii</i>, <i>iii</i>, <i>IV</i>, <i>V</i>, <i>vi</i>, and <i>vii&deg;</i> in every key</h2>
+  </div>
+
+  <div class="item item-image">
+	<ul rn-carousel class="image" rn-carousel-indicator>
+	  <li ng-repeat="image in keySelectorImages">
+		<div class="layer">
+			<img 	ng-src="{{ image }}"
+					style="padding-top: 20px; padding-bottom: 20px;">
+		</div>
+	  </li>
+	</ul>
+  </div>
+
+  <div class="item item-text-wrap">
+   Slide the image to change scale degrees and roman numerals to notes and chords in any key
+  </div>
+
+</div>
+-->

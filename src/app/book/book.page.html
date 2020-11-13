@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div ng-include="'assets/templates/book/test.html'"></div>
+
+  <ion-item>
+    <theorytab
+      video-path="2/3/1-Key-Selector"
+      tab-id="4864"
+      url-vars="sRhythmAlgorithm=NoChords&bRelativeNotation=true&bBookMode=true&nToolKitInstrumentYPad=0&bClickToLoad=true"
+    ></theorytab>
+  </ion-item>
+  
+  <ion-item>
+    <theorytab
+	video-path="2/2/Harmony-04-Swift-Repetition"
+	tab-id="5178"
+	url-vars="bShowAlternates=true&showMelody=false&noEditEnableInstrumental=true"
+></theorytab>
+  </ion-item>
+
+  <ion-item>
+   
+    <div [innerHtml]="bookContent"></div>
+  </ion-item>
+</ion-content>

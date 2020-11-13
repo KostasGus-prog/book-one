@@ -1,0 +1,14 @@
+<!-- Add attribute "webkit-playsinline" to play inline on iPhone -->
+
+<video  ng-src="{{ src }}"
+        ng-attr-poster="{{ poster }}"
+        type="{{ type }}"
+        controls
+        ng-if="iosApp || webApp">
+</video>
+
+<img    ng-if="androidApp === true"
+        ng-src="{{ poster }}"
+        ng-click="onClick()">
+
+

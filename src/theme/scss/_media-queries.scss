@@ -1,0 +1,47 @@
+/* Default media queries for mobile-first design.
+   Copy paste these into any modular css file, i.e.,
+   header.css as a starting point for media queries */
+   	
+
+/* =============================================================================
+   With comments
+   ========================================================================== */
+
+
+@media only screen and (min-width: 480px) {
+  
+  	/* Style adjustments for viewports 480px and over go here */
+  	/* For large mobile devices as well as iPhones in landscape */
+  	
+}
+
+@media only screen and (min-width: 768px){
+	
+	/* Style adjustments for viewports 768px and over go here */
+	/* For tablets in portrait orientation. Perfect for long-form reading */
+	
+}
+
+@media only screen and (min-width: 992px) {
+
+	/* Style adjustments for viewports 992px and over go here */
+	/* For desk­tops, laptops, tablets in landscape orientation */
+	
+}
+
+/* =============================================================================
+   Without comments
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+	

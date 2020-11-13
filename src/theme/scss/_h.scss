@@ -1,0 +1,86 @@
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Helvetica';
+	//font-family: 'Georgia';
+	//font-family: 'Gotham Book';
+	font-weight: bold;
+	margin-top: 0.85em; 
+	margin-bottom: 0.85em;
+}
+
+h1 {
+	span.sub {
+		color: #777;
+	}	
+}
+
+
+h1.tight, 
+h2.tight, 
+h3.tight, 
+h4.tight, 
+h5.tight {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+h1.tight-top, 
+h2.tight-top, 
+h3.tight-top, 
+h4.tight-top, 
+h5.tight-top {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+
+h1:first-child, 
+.h1:first-child,
+h2:first-child, 
+.h2:first-child,
+h3:first-child, 
+.h3:first-child,
+h4:first-child, 
+.h4:first-child {
+    margin-top: 0; 
+    padding-top: 0;
+}
+
+
+.nobold {
+	font-weight: normal;
+}
+
+.light {
+	color: #888;
+}
+
+.lighter {
+	color: #666;
+}
+
+.white-on-img {
+	/* text-shadow:  0 2px 2px rgba(0, 0, 0, 0.5); */
+	color:  rgb(255, 255, 255);
+}
+
+.dark-on-img {
+	text-shadow:  0 2px 2px rgba(255, 255, 255, 0.5);
+	color:  rgb(50, 50, 50);
+}
+
+.item { 
+	h4 {
+		font-size: inherit;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	p {
+		color: inherit;
+	}
+}

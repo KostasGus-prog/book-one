@@ -1,0 +1,39 @@
+div.reveal{
+	div.content {
+		display: none;
+		width: auto;
+	}
+	span.show {
+		display: inline;
+	}
+	span.hide {
+		display: none;
+	}
+	
+	span.show:after{ 
+		content:"Show answer";
+	}
+	span.hide:after{ 
+		content:"Hide";
+	}
+	
+	span {
+		color: $link_color;
+	}
+	span:hover {
+		color: $link_color_hover;
+		cursor: pointer;
+	}
+}
+
+div.reveal.show {
+	div.content {
+		display: block;
+	}
+	span.show {
+		display: none;
+	}
+	span.hide {
+		display: inline;
+	}
+}

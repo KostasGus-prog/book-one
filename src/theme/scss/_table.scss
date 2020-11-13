@@ -1,0 +1,503 @@
+/* Tablet and Desktop styles */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	
+	@media only screen and (min-width: 768px){
+		font-size: 1em;
+	}
+}
+
+/* Zebra striping */
+
+table.zebra {
+	tr:nth-of-type(odd) {
+		background: #F4F6F9;
+	}
+}
+
+table.valign {
+	td, th {
+		vertical-align: middle;
+	}
+}
+
+th {
+	color: black;
+	font-weight:bold;
+	background:#ffffff;
+}
+
+td, th {
+	padding: 10px;
+	border: 1px solid $border_color;
+	text-align: left;
+}
+
+td.nowrap, th.nowrap{
+	white-space: nowrap;
+}
+
+table.no-cell-border {
+	
+	td, th{
+		border: 0px;
+		text-align:left;
+		padding-left: 0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+
+table.invoice{
+
+	/* Kill zebra striping */
+	tr{
+		background: #FFF;
+		border-bottom: 1px solid $border_color;
+	}
+	
+	td, th{
+		border: 0px;
+		text-align:left;
+	}
+	
+	/* Last col is align right, no padding-right*/
+	th:nth-of-type(3), td:nth-of-type(3){
+		text-align:right;
+		padding-right:0px;
+	}
+	
+	/* 1st col is no padding-left*/
+	th:nth-of-type(1), td:nth-of-type(1){
+		padding-left:0px;
+	}
+	
+	th:nth-of-type(2), td:nth-of-type(2){
+		text-align:right;
+	}
+	
+	tr.noborder{
+		border-bottom:0px;
+
+	}
+	
+	tr.tight-bottom{
+		td, th {
+			padding-bottom: 1px;
+		}
+	}
+	tr.tight-top{
+		td, th {
+			padding-top: 1px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 480px){
+
+
+	/* Force table to not be like tables anymore */
+
+	/* table{ display:block} doesn't work in IE so we need
+	to wrap the media queries in an IE conditional */
+
+
+	/* Mobile only styles */
+	
+	table.mobile{
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+			
+		
+		tr{
+			margin-top:10px;
+			border: 1px solid $border_color;
+			padding:5px;
+		}
+		
+		td{
+			text-align: left;
+			padding:5px;
+		}
+		
+		td{
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+		
+		/* Kill the bottom border on the last td */
+		td:nth-last-child(1) {
+			border-bottom: 0px;
+		}
+		
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			/*top: 6px; */
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+		
+		/* Zebra stripe */
+		tr:nth-of-type(odd) {
+			/*background: #eee;*/
+			background: #F4F6F9;
+			background: #F5F5F5;
+		}
+		
+		
+		/*
+		Label the data (revision history)
+		*/
+		
+		table.revision-history td:nth-of-type(1):before { content: "Date"; }
+		table.revision-history td:nth-of-type(2):before { content: "Revised by"; }
+		table.revision-history td:nth-of-type(3):before { content: "Editors comments"; }
+		
+		/* Projects */
+		table.projects td:nth-of-type(1):before { content: "Project"; }
+		table.projects td:nth-of-type(2):before { content: "Date modified"; }
+		table.projects td:nth-of-type(3):before { content: "Share"; }
+		table.projects td:nth-of-type(4):before { content: "Privacy"; }
+		table.projects td:nth-of-type(5):before { content: "Delete"; }
+		
+		/* Analyses */
+		table.analyses td:nth-of-type(1):before { content: "Artist"; }
+		table.analyses td:nth-of-type(2):before { content: "Song"; }
+		table.analyses td:nth-of-type(3):before { content: "Section"; }
+		table.analyses td:nth-of-type(4):before { content: "Date modified"; }
+		table.analyses td:nth-of-type(5):before { content: "Is current?"; }
+	
+		/* Top Contributors */
+		table.top-contributors td:nth-of-type(1):before { content: "Rank"; }
+		table.top-contributors td:nth-of-type(2):before { content: "User"; }
+		table.top-contributors td:nth-of-type(3):before { content: "Points"; }		
+		
+		/*
+		td:nth-of-type(4):before { content: "Favorite Color"; }
+		td:nth-of-type(5):before { content: "Wars of Trek?"; }
+		td:nth-of-type(6):before { content: "Porn Name"; }
+		td:nth-of-type(7):before { content: "Date of Birth"; }
+		td:nth-of-type(8):before { content: "Dream Vacation City"; }
+		td:nth-of-type(9):before { content: "GPA"; }
+		td:nth-of-type(10):before { content: "Arbitrary Data"; }
+		*/
+	}
+}
+
+
+table.modern {
+	@extend .round;
+	/* border: 1px solid $border-color; */
+	
+	tr {
+		border: 1px solid $border-color;
+		td {
+			border: none;
+			padding-right: 0;
+		}
+		
+		th {
+			border: none;
+			padding-right: 0;
+		}
+	}
+	
+	
+	
+	
+	/*
+	tr:first-child td:first-child { border-top-left-radius: 10px; }
+	tr:first-child td:last-child { border-top-right-radius: 10px; }
+	tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+	tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+	*/
+	
+	/*
+	tr:last-child {
+		@extend .round-b;
+		border: 1px solid #FF0000;	
+	}
+	*/
+}
+
+table.no-border {
+	tr {
+		border: none;
+		td {
+			border: none;
+		}
+		th {
+			border: none;
+		}
+	}
+}
+
+table.no-pad {
+	padding: 0;
+	tr {
+		padding: 0;
+		td {
+			padding: 0;
+		}
+		th {
+			padding: 0;
+		}
+	}
+}
+
+table.feature {
+	
+	tr {
+		td.txt-left {
+			padding-right: 5%;
+			width: 75%;
+			vertical-align: middle;
+		}
+		td.txt-right {
+			padding-left: 5%;
+			width: 75%;
+			vertical-align: middle;
+		}
+		td.img {
+			width: 20%;
+			vertical-align: middle;
+			padding: 0;
+		}
+	}
+}
+
+table.quote {
+	
+	font-family: Georgia, serif;
+	font-style: italic;
+	tr {
+		td.icon {
+			font-size: 1.3em;
+			color: #999;
+			vertical-align: top;
+		}
+		td {
+			cite {
+				color: #999;
+				font-size: 0.7em;;
+				display: block;
+				margin-top: 5px;
+			}
+			cite:before {
+				content: "\2014 \2009";
+			}
+		}
+	}
+}
+
+table.message {
+	tr {
+		td {
+			vertical-align: middle;
+		}
+		td.icon {
+			font-size: 3em;
+		}
+	}
+}
+
+table.vertical-center {
+	tr {
+		td {
+			vertical-align: middle;
+		}
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+
+table.my-tabs {
+	tr {
+		
+		border-bottom: 2px solid #FFFFFF;
+		/* background-color: $list_bg_color; */
+		border-bottom: 1px solid $border_color;
+		
+		td,
+		th {
+			
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		
+		td:last-child {
+			text-align: right;
+		}
+		th:last-child {
+			text-align: right;
+		}
+		
+		td.date {
+			color: #555;
+		}
+	}
+	
+	tr:hover {
+		background: $list_bg_color; /* $highlight_color; */
+	}
+	
+	
+}
+
+$app_nav_mobile_pad: 15px;
+$app_nav_tablet_pad: 20px;
+	
+table.app-nav {
+	
+	
+	
+	width: 320px - 2 * $padding_mobile - 2px;
+	font-size: 12px;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	
+	@media only screen and (min-width: 768px) {
+		font-size: 14px;
+		width: 300px;
+	}
+
+	
+	tr {
+	
+		td,
+		th {
+			border: none;
+		}
+		
+		
+		td.center {
+			text-align: center;
+			p.description {
+				font-size: 0.9em;
+				color: #555;
+				margin-top: 0.1em;
+				margin-bottom: 0.4em;
+			}
+		}
+		
+		td {
+			padding-left: $app_nav_mobile_pad;
+			padding-right: $app_nav_mobile_pad;
+			@media only screen and (min-width: 768px) {
+				padding-left: $app_nav_tablet_pad;
+				padding-right: $app_nav_tablet_pad;
+			}
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+		td.icon {
+			width: 60px;
+			padding-right: 15px;
+		}
+		
+		td.text {
+			vertical-align: middle;
+			padding-left: 0px;
+			p.description {
+				font-size: 0.9em;
+				color: #888;
+				margin-top: 0.1em;
+				margin-bottom: 0.4em;
+			}
+		}
+	}
+	
+	tr:hover {
+		background: $link_color;
+		color: #FFFFFF !important;
+		cursor: pointer;
+		td {
+			p.description {
+				color: #FFF;
+			}
+			svg path{
+				fill: #FFFFFF;
+			}
+		}
+	}
+}
+
+div.dropdown,
+div.site-meta { 
+	$links_color: #999;
+	$links_color_hover: #555;
+	
+	div.home,
+	div.links,
+	div.social {
+		
+		/* background: $list_bg_color; */
+		padding-left: $app_nav_mobile_pad;
+		padding-right: $app_nav_mobile_pad;
+		@media only screen and (min-width: 768px) {
+			padding-left: $app_nav_tablet_pad;
+			padding-right: $app_nav_tablet_pad;
+		}
+		
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 12px;
+		/* font-weight: bold; */
+		
+		a {
+			color: $links_color;
+		}
+		a:hover {
+			color: $links_color_hover;
+		}	
+	}
+	
+	div.home {
+		/* border-bottom: 1px solid $border_color; */
+		@extend .round-t;
+		background: #FFFFFF;
+		padding-top: $app_nav_mobile_pad;
+		@media only screen and (min-width: 768px) {
+			padding-top: $app_nav_tablet_pad;
+		}
+		padding-bottom: 0px;
+		text-align: center;
+	}
+	
+	div.links {
+		/* border-top: 1px solid $border_color; */
+		@extend .round-b;
+		padding-bottom: $app_nav_mobile_pad;
+		@media only screen and (min-width: 768px) {
+			padding-bottom: $app_nav_tablet_pad;
+		}
+		color: $links_color;
+	}
+	
+	div.social {
+		/* border-top: 1px solid $border_color; */
+		padding-bottom: 4px;
+	}	
+}

@@ -1,0 +1,39 @@
+<h1>Rate Us</h1>
+<p>We always love to hear from our readers.  If you have a few minutes to spare, we invite you to rate Hooktheory I:</p>
+
+<!-- show in apps -->
+<a
+	href=""
+	class="button button-block button-positive button-outline"
+	ng-click="rate()"
+	ng-if="ios || android || fireos"><!-- icon-left ion-social-apple-->
+	Rate Us
+</a>
+
+
+<!-- show in browsers -->
+
+<a
+	href="https://itunes.apple.com/us/app/hooktheory-i/id862112892?mt=8"
+	target="itunes_store"
+	class="button button-block button-positive button-outline"
+	ng-if="!ios && !android && !fireos">
+	Rate on Apple App Store
+</a>
+
+<a
+	href="https://play.google.com/store/apps/details?id=com.hooktheory.hooktheory_one"
+	target="blank"
+	class="button button-block button-positive button-outline"
+	ng-if="!ios && !android && !fireos">
+	Rate on Google Play
+</a>
+
+<a
+	href="http://itunes.apple.com/us/book/hooktheory-music-theory-for/id533715898?mt=11&uo=4"
+	target="itunes_store"
+	class="button button-block button-positive button-outline"
+	ng-if="!ios && !android && !fireos">
+	Rate on Apple iBookstore
+</a>
+

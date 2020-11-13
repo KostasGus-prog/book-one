@@ -1,0 +1,37 @@
+/*
+p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+*/
+
+
+p {
+	margin-before: 1em;
+	margin-after: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+p.app-description {
+	font-size: 0.8em;
+	line-height: 1.3em;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+}
+
+p.no-margin {
+	margin: 0;
+}
+
+p.no-top-margin {
+	margin-top: 0;
+}
+
+p.light {
+	color: $color_light;
+}
+
+p.small {
+	font-size: 0.8em;
+}
